@@ -1,47 +1,33 @@
 #!/usr/bin/python3
-"""
-This module defines a Square class that represents a square shape.
-"""
+""" Module for square class"""
 
 
 class Square():
-    """
-    Represents a square shape with attributes for width, height, and methods
-    to calculate the area and perimeter.
-    """
+    """ Square class """
+    width = 0
+    height = 0
 
     def __init__(self, *args, **kwargs):
-        """
-        Initializes a Square object with optional width and height parameters.
-        """
+        """ Instantiation of class """
         for key, value in kwargs.items():
             setattr(self, key, value)
 
     def area_of_my_square(self):
-        """
-        Calculates and returns the area of the square.
-        Formula: width * height
-        """
+        """ Area of the square """
         return self.width * self.height
 
-    def perimeter_of_my_square(self):
-        """
-        Calculates and returns the perimeter of the square.
-        Formula: (width * 2) + (height * 2)
-        """
+    def permiter_of_my_square(self):
+        """ Perimeter of my square """
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """
-        Returns a string representation of the square's dimensions.
-        Example: "12/9" for a square with width 12 and height 9.
-        """
+        """ Printable representation """
         return "{}/{}".format(self.width, self.height)
 
 
 if __name__ == "__main__":
-    # Example usage
+    """ Create a square object """
     s = Square(width=12, height=9)
-    print(s)  # Output: 12/9
-    print(s.area_of_my_square())  # Output: 108
-    print(s.perimeter_of_my_square())  # Output: 42
+    print(s)
+    print(s.area_of_my_square())
+    print(s.permiter_of_my_square())
